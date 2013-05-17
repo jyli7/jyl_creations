@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 @mixin transition($transition) {
   -webkit-transition: $transition;
      -moz-transition: $transition;
@@ -12,7 +13,7 @@
 
 body {
 	background-color: white;
-	// background-image: image-url('cream_dust.png');
+	// background-image: image-url('tiny_grid.png');
 }
 
 .main-header {
@@ -34,12 +35,40 @@ body {
 }
 
 a, a:visited {
-	color: #366CE0;
+	color: #aaaaaa;
 	text-decoration: none;
-	font-size: 20px;
-	@include transition(color 0.5s ease);
+	font-size: 18px;
+	@include transition(all 0.2s linear);
 
 	&:hover {
-		color: #87ABFA;
+		color: #4DBBB9;
+		opacity: 0.8;
+		@include transition(all 0.7s ease);
+	};
+}
+
+.work-items {
+	margin-top: 40px;
+}
+
+.work-item {
+	float: left;
+	margin: 0px 20px 35px 0;
+	width: 95%;
+	border: 5px solid black;
+	height: 250px;
+	position: relative;
+	overflow: hidden;
+}
+
+.work-img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	@include transition(top 0.5s linear);
+
+	&:hover {
+		top: -360px;
+		@include transition(top 1.2s ease-in);
 	};
 }
