@@ -42,7 +42,6 @@ a, a:visited {
 
 	&:hover {
 		color: #4DBBB9;
-		opacity: 0.8;
 		@include transition(all 0.7s ease);
 	};
 }
