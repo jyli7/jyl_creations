@@ -11,11 +11,13 @@
 }
 
 body {
-	background-image: image-url('cream_dust.png');
+	background-color: white;
+	// background-image: image-url('cream_dust.png');
 }
 
 .main-header {
 	padding: 30px 0px;
+	border-bottom: 3px double #eee;
 }
 
 .menu {
