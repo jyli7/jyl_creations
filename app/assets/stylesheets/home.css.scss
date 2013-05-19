@@ -16,6 +16,7 @@ $link-hover-color: #BFBFBF;
 
 body {
 	background-color: $body-background;
+	color: white;
 	// background-image: image-url('tiny_grid.png');
 }
 
@@ -71,19 +72,34 @@ a, a:visited {
 	float: right;
 }
 
+.left {
+	float: left;
+}
+
 .work-items {
 	margin-top: 40px;
 }
 
+.work-item-container {
+	margin: 35px 0px 0px 0px;
+	overflow: auto;
+}
+
 .work-item {
 	float: left;
-	margin: 0px 0px 35px 0;
 	width: 100%;
 	border: 2px solid #E6E6E6;
 	height: 250px;
 	position: relative;
 	overflow: hidden;
 	box-sizing: border-box;
+}
+
+.work-item-description {
+	position: relative;
+	top: 12px;
+	margin-bottom: 30px;
+	font-size: 14px;
 }
 
 .work-img {
