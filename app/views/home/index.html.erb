@@ -18,12 +18,11 @@
 <div class="work-items">
 	<% @items.each do |item| %>
 		<article class="work-item-container">
-			<h3><%= item[:name] %></h3>
 			<div class="work-item">
 				<a href="<%= item[:link]%>"><img src=<%= "/assets/#{item[:image]}" %> class="work-img"></a>
 			</div>
 			<div class="work-item-description ten columns alpha left">
-				<%= item[:description] %>
+				<span class="strong"><%= item[:name] %>.</span> <%= item[:description] %>
 			</div>
 
 			<div class="work-item-description omega right">

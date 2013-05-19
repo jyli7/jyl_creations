@@ -12,7 +12,7 @@ class HomeController < ApplicationController
         name: "YLS Class Action",
         link: "http://www.ylsclassaction.com",
         image: "yls_class_action.png",
-        description: "Better course selection and registration for Yale Law School's 600 students.",
+        description: "Better course selection for Yale Law School's 600 students.",
         tech: "[Rails, Javascript, jQuery, Postgresql]"
       },
       {
@@ -33,7 +33,7 @@ class HomeController < ApplicationController
         name: "Lake Chelan",
         link: "http://lake-chelan.herokuapp.com",
         image: "lake_chelan.png",
-        description: "Wedding related site, used to invite guests to post-wedding trip (password protected).",
+        description: "Post-wedding trip site (password protected).",
         tech: "[Javascript]"
       }
     ]

@@ -81,9 +81,15 @@ a, a:visited {
 }
 
 .work-item-container {
-	margin: 35px 0px 0px 0px;
+	padding: 35px 0px 25px 0px;
 	overflow: auto;
+	// border-top: 3px double #E6E6E6;
 }
+
+.work-item-container:first-child {
+	border: none;
+	padding-top: 10px;
+};
 
 .work-item {
 	float: left;
@@ -99,7 +105,12 @@ a, a:visited {
 	position: relative;
 	top: 12px;
 	margin-bottom: 30px;
-	font-size: 14px;
+	font-size: 16px;
+	color: white;
+
+	&.left {
+		font-style: italic;
+	}
 }
 
 .work-img {
@@ -114,4 +125,8 @@ a, a:visited {
 		opacity: 1;
 		@include transition(top 1.2s ease-in);
 	};
+}
+
+.strong {
+	font-weight: bold;
 }
