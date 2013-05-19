@@ -11,25 +11,13 @@
 </header>
 
 <div class="work-items">
-	
-	<article>
-		<h3>YLS Class Action</h3>	
-		<div class="work-item">
-			<a href='#'><img src="/assets/yls_class_action.png" class="work-img"></a>
-		</div>
-	</article>
+	<% @items.each do |item| %>
+		<article>
+			<h3><%= item[:name] %></h3>
+			<div class="work-item">
+				<a href="<%= item[:link]%>"><img src=<%= "/assets/#{item[:image]}" %> class="work-img"></a>
+			</div>
+		</article>
+	<% end %>
 
-	<article>
-		<h3>Year after Year</h3>
-		<div class="work-item">
-			<a href='#'><img src="/assets/year_after_year.png" class="work-img"></a>
-		</div>
-	</article>
-
-	<article>
-		<h3>Apply Up</h3>
-		<div class="work-item">
-			<a href='#'><img src="/assets/apply_up.png" class="work-img"></a>
-		</div>
-	</article>
 </div>
