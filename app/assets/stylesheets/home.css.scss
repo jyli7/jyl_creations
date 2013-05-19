@@ -4,7 +4,7 @@
 
 $body-background: #161616;
 $link-color: #FFFFFF;
-$light-teal: #85E0FF;
+$link-hover-color: #BFBFBF;
 
 @mixin transition($transition) {
   -webkit-transition: $transition;
@@ -19,18 +19,26 @@ body {
 	// background-image: image-url('tiny_grid.png');
 }
 
+.left-menu {
+	a {
+		font-size: 28px;
+	}
+}
+
 h3 {
 	color: white;
-	font-variant: small-caps;
+	font-size: 24px;
+	font-family: 'Brawler', Palatino, Lucida Grande, Helvetica, sans-serif;
 }
  
 .main-header {
-	padding: 30px 0px;
+	padding: 35px 0px;
 }
 
 .menu {
 	margin-bottom: 0px;
 	font-size: 20px;
+	a { font-variant: small-caps; }
 }
 
 .right-menu {
@@ -50,12 +58,11 @@ h3 {
 	
 a, a:visited {
 	color: $link-color;
-	font-variant: small-caps;
 	text-decoration: none;
 	@include transition(all 0.2s linear);
 
 	&:hover {
-		color: $light-teal;
+		color: $link-hover-color;
 		@include transition(all 0.7s ease);
 	};
 }
@@ -72,7 +79,7 @@ a, a:visited {
 	float: left;
 	margin: 0px 0px 35px 0;
 	width: 100%;
-	border: 3px solid #E6E6E6;
+	border: 2px solid #E6E6E6;
 	height: 250px;
 	position: relative;
 	overflow: hidden;
@@ -83,8 +90,8 @@ a, a:visited {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	opacity: 0.8;
-	@include transition(top 0.5s linear);
+	opacity: 0.9;
+	@include transition(top 0.3s linear);
 
 	&:hover {
 		top: -360px;
