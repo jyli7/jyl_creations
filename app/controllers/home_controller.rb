@@ -16,18 +16,27 @@ class HomeController < ApplicationController
         tech: "[Rails, Javascript, jQuery, MongoDB]"
       },
       {
-        name: "Grounch",
-        link: "http://www.groun.ch",
-        image: "grounch.png",
-        description: "Get group movie recommendations for you and your friends.",
-        tech: "[Rails, jQuery, HunchAPI, Postgresql]"
-      },
-      {
         name: "Lake Chelan",
         link: "http://lake-chelan.herokuapp.com",
         image: "lake_chelan.png",
         description: "Post-wedding trip site for client.",
         tech: "[Javascript]"
+      },
+      {
+        name: "Pivotal Labs",
+        link: "http://www.pivotallabs.com",
+        image: "pivotal_labs.png",
+        description: "Software Engineer. Used agile methodologies and rigorous test-driven development to
+        develop several projects (e.g. a complete RESTful API for a mobile client,",
+        tech: "[Ruby, Rails, Javascript, MySQL]"
+      },
+      {
+        name: "Codecademy",
+        link: "http://www.codecademy.com",
+        image: "codecademy.png",
+        description: "Full stack developer. Worked with other developers to design and implement products across
+        the site (groups, quizzes, user dashboard, user orientation, activity feed)",
+        tech: "[Rails, Javascript, MongoDB, Redis]"
       },
       {
         name: "Apply Up",
