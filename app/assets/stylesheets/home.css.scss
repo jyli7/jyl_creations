@@ -22,7 +22,10 @@ body {
 
 .left-menu {
 	a {
-		font-size: 28px;
+		font-size: 34px;
+		position: relative;
+		top: 4px;
+		font-family: "Open Sans", arial, sans-serif;
 	}
 }
 
@@ -39,7 +42,14 @@ h3 {
 .menu {
 	margin-bottom: 0px;
 	font-size: 20px;
+}
+
+.right-menu {
 	a { font-variant: small-caps; }
+}
+
+.logo {
+	font-variant: none;
 }
 
 .right-menu {
