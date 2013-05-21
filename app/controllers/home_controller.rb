@@ -2,13 +2,6 @@ class HomeController < ApplicationController
   def index
     @items = [
       {
-        name: "Apply Up",
-        link: "http://applyup.herokuapp.com",
-        image: "apply_up.png", 
-        description: "The Common Application for Startups.",
-        tech: "[Rails, Javascript, Backbone, MongoDB]"
-      },
-      {
         name: "YLS Class Action",
         link: "http://www.ylsclassaction.com",
         image: "yls_class_action.png",
@@ -33,8 +26,15 @@ class HomeController < ApplicationController
         name: "Lake Chelan",
         link: "http://lake-chelan.herokuapp.com",
         image: "lake_chelan.png",
-        description: "Post-wedding trip site (password protected).",
+        description: "Post-wedding trip site for client.",
         tech: "[Javascript]"
+      },
+      {
+        name: "Apply Up",
+        link: "http://applyup.herokuapp.com",
+        image: "apply_up.png", 
+        description: "The Common Application for Startups. (Work in progress, password protected).",
+        tech: "[Rails, Javascript, Backbone, MongoDB]"
       }
     ]
 
