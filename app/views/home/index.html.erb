@@ -21,12 +21,12 @@
 			<div class="work-item">
 				<a href="<%= item[:link]%>"><img src=<%= "/assets/#{item[:image]}" %> class="work-img"></a>
 			</div>
-			<div class="work-item-description ten columns alpha left">
-				<span class="strong"><%= item[:name] %>.</span> <%= item[:description] %>
-			</div>
-
-			<div class="work-item-description omega right">
-				<%= item[:tech] %>
+			<div class="work-item-description alpha left hidden">
+				<div class="description ">
+					<span class="strong"><%= item[:name] %>.</span>
+					<%= item[:description] %>
+				</div>
+				<div class="tech"><%= item[:tech] %></div>
 			</div>
 		</article>
 	<% end %>

@@ -82,31 +82,50 @@ a, a:visited {
 
 .work-item-container {
 	padding: 35px 0px 25px 0px;
-	overflow: auto;
-	// border-top: 3px double #E6E6E6;
+	width: 300px;
+	height: 200px;
+	float: left;
+	margin-right: 30px;
+	position: relative;
 }
+
+.work-item-container:nth-child(3n) {
+	margin-right: 0px;
+};
 
 .work-item-container:first-child {
 	border: none;
-	padding-top: 10px;
 };
 
 .work-item {
 	float: left;
 	width: 100%;
 	border: 2px solid #E6E6E6;
-	height: 250px;
+	height: 200px;
 	position: relative;
 	overflow: hidden;
 	box-sizing: border-box;
 }
 
 .work-item-description {
-	position: relative;
-	top: 12px;
-	margin-bottom: 30px;
 	font-size: 16px;
 	color: white;
+	width: 95%;
+	height: 85%;
+	position: absolute;
+	opacity: 1;
+
+	.description {
+		position: absolute;
+		top: 9px;
+		left: 10px;
+	}
+	.tech {
+		position: absolute;
+		bottom: 32px;
+		left: 10px;
+		font-size: 15px;
+	}
 
 	&.left {
 		font-style: italic;
@@ -117,13 +136,13 @@ a, a:visited {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	opacity: 0.9;
-	@include transition(top 0.3s linear);
+	opacity: 1;
+	z-index: 1;
+	@include transition(opacity 0.2s linear);
 
 	&:hover {
-		top: -360px;
-		opacity: 1;
-		@include transition(top 1.2s ease-in);
+		opacity: 0.1;
+		@include transition(opacity 0.3s linear);
 	};
 }
 
