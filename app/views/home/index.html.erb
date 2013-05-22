@@ -2,14 +2,15 @@
 	<div class="six columns alpha">
 		<ul class="menu left-menu">
 			<li class="menu-item">
-				<a href="/" class="logo">Jimmy Y. Li</a>
+				<!-- <a href="/" class="logo"><span class="strongest">Jimmy</span> </span>Li</a> -->
+				<a href="/" class="logo"><span class="stronger">Jimmy Y. Li</a>
 			</li>
 		</ul>
 	</div>
 
 	<div class="omega right">
 		<ul class="menu right-menu">
-			<li class="menu-item"><%= link_to "Work", '#' %></li>
+			<li class="menu-item active"><%= link_to "Work", '#' %></li>
 			<li class="menu-item"><%= link_to "About", '#' %></li>
 			<li class="menu-item"><%= link_to "Writing", '#' %></li>
 			<li class="menu-item"><%= link_to "Project Inquiry", '#' %></li>
@@ -25,7 +26,7 @@
 			</div>
 			<div class="work-item-description alpha left hidden">
 				<div class="description ">
-					<span class="strong"><%= item[:name] %>.</span>
+					<div class="strong"><%= item[:name] %>.</div>
 					<%= item[:description] %>
 				</div>
 				<div class="tech"><%= item[:tech] %></div>

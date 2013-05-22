@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$body-background: #1D1D1D;
+$body-background: #202020;
 $link-color: #FFFFFF;
-$link-hover-color: #BFBFBF;
+$link-hover-color: #CCD6EB;
 
 @mixin transition($transition) {
   -webkit-transition: $transition;
@@ -36,7 +36,12 @@ h3 {
 }
  
 .main-header {
-	padding: 35px 0px;
+	padding: 40px 0px;
+}
+
+
+.stronger {
+	font-weight: 600;
 }
 
 .menu {
@@ -53,13 +58,16 @@ h3 {
 }
 
 .right-menu {
-	border-bottom: 1px solid #eee;
+	li.active {
+		border-bottom: 1px solid #eee;
+	}
+	
 	padding: 0 0 5px 0;
 	box-sizing: border-box;
 
 	li {
 		display: inline;
-		margin-left: 70px;
+		margin-left: 40px;
 	}
 
 	li:first-child {
@@ -74,7 +82,7 @@ a, a:visited {
 
 	&:hover {
 		color: $link-hover-color;
-		@include transition(all 0.7s ease);
+		@include transition(all 0.5s ease);
 	};
 }
 
