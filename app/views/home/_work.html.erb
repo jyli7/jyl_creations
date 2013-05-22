@@ -1,0 +1,14 @@
+<% items.each do |item| %>
+	<article class="work-item-container">
+		<div class="work-item">
+			<a href="<%= item[:link]%>"><img src=<%= "/assets/#{item[:image]}" %> class="work-img"></a>
+		</div>
+		<div class="work-item-description alpha left hidden">
+			<div class="description ">
+				<div class="strong"><%= item[:name] %>.</div>
+				<%= item[:description] %>
+			</div>
+			<div class="tech"><%= item[:tech] %></div>
+		</div>
+	</article>
+<% end %>

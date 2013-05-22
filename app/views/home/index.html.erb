@@ -1,37 +1,15 @@
-<header class="main-header">
-	<div class="six columns alpha">
-		<ul class="menu left-menu">
-			<li class="menu-item">
-				<!-- <a href="/" class="logo"><span class="strongest">Jimmy</span> </span>Li</a> -->
-				<a href="/" class="logo"><span class="stronger">Jimmy Y. Li</a>
-			</li>
-		</ul>
-	</div>
+<div class="work section-item active">
+    <%= render 'home/work.html.erb', {items: @items} %>
+</div>
 
-	<div class="omega right">
-		<ul class="menu right-menu">
-			<li class="menu-item active"><%= link_to "Work", '#' %></li>
-			<li class="menu-item"><%= link_to "About", '#' %></li>
-			<li class="menu-item"><%= link_to "Writing", '#' %></li>
-			<li class="menu-item"><%= link_to "Project Inquiry", '#' %></li>
-		</ul>
-	</div>
-</header>
+<div class="about section-item stage-right">
+	<%= render 'home/about.html.erb', {items: @items} %>
+</div>
 
-<div class="work-items">
-	<% @items.each do |item| %>
-		<article class="work-item-container">
-			<div class="work-item">
-				<a href="<%= item[:link]%>"><img src=<%= "/assets/#{item[:image]}" %> class="work-img"></a>
-			</div>
-			<div class="work-item-description alpha left hidden">
-				<div class="description ">
-					<div class="strong"><%= item[:name] %>.</div>
-					<%= item[:description] %>
-				</div>
-				<div class="tech"><%= item[:tech] %></div>
-			</div>
-		</article>
-	<% end %>
+<div class="writing section-item stage-right">
+	<div>Writing</div>
+</div>
 
+<div class="inquiry section-item stage-right">
+	<div>Inquiry</div>
 </div>

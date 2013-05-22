@@ -36,7 +36,7 @@ h3 {
 }
  
 .main-header {
-	padding: 40px 0px;
+	padding: 45px 0px;
 }
 
 
@@ -94,7 +94,7 @@ a, a:visited {
 	float: left;
 }
 
-.work-items {
+.section-item {
 	margin-top: 40px;
 }
 
@@ -166,4 +166,31 @@ a, a:visited {
 
 .strong {
 	font-weight: bold;
+}
+
+#main {
+	position: relative;
+}
+
+.section-item {
+	position: absolute;
+	&.stage-left {
+		left: -3500px;
+		@include transition(left 0.7s linear);
+	}
+
+	&.stage-right {
+		left: 3500px;
+		@include transition(left 0.7s linear);
+	}
+	
+	&.active {
+		left: 0px;
+		@include transition(left 0.7s linear);
+	}
+
+}
+
+.about-blurb {
+	font-size: 22px;
 }
