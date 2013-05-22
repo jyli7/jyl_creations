@@ -5,10 +5,16 @@ $(function () {
 });
 
 var initMenuLinkListener = function () {
-	$('.menu-item a').on('click', function () {
+	$('.menu-item a, .magic-link').on('click', function (e) {
+		e.preventDefault();
 		$('.menu-item').removeClass('active');
-		$(this).parent('.menu-item').addClass('active');
-		$(this).parent('.menu-item').trigger('madeActive');
+		if ($(this).parent('.menu-item') === true) {
+			var $menuItem = $(this).parent('.menu-item');
+		} else {
+			var $menuItem = $('.menu-item' + '[data-name=' + $(this).data('name') +']');
+		}
+		$menuItem.addClass('active');
+		$menuItem.trigger('madeActive');
 	});
 }
 
@@ -18,6 +24,8 @@ var initMenuItemListener = function () {
 	$('.menu-item').on('madeActive', function () {
 		// For section scrolling
 		var sectionName = $(this).children('a').data('name');
+		window.location.hash = sectionName;
+		
 		$('.section-item').removeClass('stage-left active stage-right');
 		sections.forEach(function (section){
 			if (sections.indexOf(section) < sections.indexOf(sectionName)){
@@ -34,11 +42,9 @@ var initMenuItemListener = function () {
 }
 
 var identifySection = function () {
-	if(window.location.pathname) {
-    var path = window.location.pathname.substring(1);
+	if(window.location.hash) {
+    var hashName = window.location.hash.slice(1);
     $('.menu-item').removeClass('active');
-    $('.menu-item a' + '[data-name=' + path + ']').parent('.menu-item')
-    																															 .addClass('active')
-    																															 .trigger('madeActive');
+    $('.menu-item a' + '[data-name=' + hashName + ']').parent('.menu-item').addClass('active').trigger('madeActive');
   }
 }
