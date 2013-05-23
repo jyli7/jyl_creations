@@ -5,8 +5,8 @@
 $body-background: #01000D;
 $link-color: #FFFFFF;
 $menu-link-color: black;
-$link-hover-color: #CCD6EB;
-$menu-link-hover-color: #474747;
+$link-hover-color: #AAAAAA;
+$menu-link-hover-color: #333333;
 $header-wrap-color: #F7F7F7;
 $nav-border-color: #636363;
 
@@ -26,7 +26,7 @@ body {
 
 .header-wrap {
 	width: 100%;
-	border-bottom: 3px solid $nav-border-color;
+	border-bottom: 4px solid $nav-border-color;
 	padding-bottom: 22px;
 	background-color: $header-wrap-color;
 }
@@ -71,7 +71,7 @@ h3 {
 
 .right-menu {
 	li.active {
-		border-bottom: 2px solid black;
+		border-bottom: 1px solid black;
 	}
 	
 	padding: 0 0 5px 0;
@@ -94,7 +94,7 @@ a, a:visited {
 
 	&:hover {
 		color: $link-hover-color;
-		@include transition(all 0.4s ease);
+		@include transition(all 0.2s ease);
 	};
 }
 
@@ -102,12 +102,32 @@ a, a:visited {
 	a, a:visited {
 		color: $menu-link-color;
 		text-decoration: none;
-		@include transition(all 0.1s linear);
+		@include transition(color 0.1s linear);
+	}
+}
 
-		&:hover {
+.left-menu {
+	li:hover {
+		a {
 			color: $menu-link-hover-color;
-			@include transition(all 0.4s ease);
+			@include transition(color 0.2s linear);
 		}
+	};
+}
+
+.right-menu {
+	li {
+		box-sizing: border-box;
+		&:hover {
+			a {
+				border-bottom: 1px dotted black;
+			}
+		}
+		&.active:hover {
+			a {
+				border-bottom: none;
+			}
+		};
 	}
 }
 
