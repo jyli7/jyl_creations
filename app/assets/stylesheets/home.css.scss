@@ -2,9 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$body-background: #202020;
+$body-background: #01000D;
 $link-color: #FFFFFF;
+$menu-link-color: black;
 $link-hover-color: #CCD6EB;
+$menu-link-hover-color: #696667;
+$header-wrap-color: #F7F7F7;
+$nav-border-color: #636363;
 
 @mixin transition($transition) {
   -webkit-transition: $transition;
@@ -20,12 +24,20 @@ body {
 	// background-image: image-url('tiny_grid.png');
 }
 
+.header-wrap {
+	width: 100%;
+	border-bottom: 3px solid $nav-border-color;
+	padding-bottom: 22px;
+	background-color: $header-wrap-color;
+}
+
+
 .left-menu {
 	a {
 		font-size: 34px;
 		position: relative;
-		top: 4px;
-		font-family: "Open Sans", arial, sans-serif;
+		top: 7px;
+		font-family: "Vollkorn", arial, sans-serif;
 	}
 }
 
@@ -36,7 +48,7 @@ h3 {
 }
  
 .main-header {
-	padding: 45px 0px;
+	padding: 40px 0px;
 }
 
 
@@ -59,7 +71,7 @@ h3 {
 
 .right-menu {
 	li.active {
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid black;
 	}
 	
 	padding: 0 0 5px 0;
@@ -72,18 +84,31 @@ h3 {
 
 	li:first-child {
 		margin-left: 0px;
-	};
+	}
 }
 	
 a, a:visited {
 	color: $link-color;
 	text-decoration: none;
-	@include transition(all 0.2s linear);
+	@include transition(all 0.1s linear);
 
 	&:hover {
 		color: $link-hover-color;
-		@include transition(all 0.5s ease);
+		@include transition(all 0.4s ease);
 	};
+}
+
+.menu {
+	a, a:visited {
+		color: $menu-link-color;
+		text-decoration: none;
+		@include transition(all 0.1s linear);
+
+		&:hover {
+			color: $menu-link-hover-color;
+			@include transition(all 0.4s ease);
+		}
+	}
 }
 
 .right {
@@ -176,17 +201,17 @@ a, a:visited {
 	position: absolute;
 	&.stage-left {
 		left: -3500px;
-		@include transition(left 0.7s linear);
+		@include transition(left 0.5s linear);
 	}
 
 	&.stage-right {
 		left: 3500px;
-		@include transition(left 0.7s linear);
+		@include transition(left 0.5s linear);
 	}
 	
 	&.active {
 		left: 0px;
-		@include transition(left 0.7s linear);
+		@include transition(left 0.5s linear);
 	}
 
 }
