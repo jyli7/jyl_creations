@@ -7,21 +7,20 @@
 }
 
 .post-title {
-	margin-top: 12px;
+	margin-top: 23px;
 	margin-bottom: 32px;
-	float: left;
+	font-family: "Georgia", "Times New Roman", serif;
 }
 
 .last-edited {
 	font-size: 14px;
-	float: right;
 	font-style: italic;
-	margin-top: 5px;
+	margin-top: 10px;
+	padding-bottom: 30px;
 }
 
 .post-body {
 	font-size: 15px;
-	clear: both;
 	a {
 		border-bottom: 1px dotted white;
 	}
@@ -42,4 +41,9 @@
 	font-size: 18px;
 	font-weight: bold;
 	border-bottom: 2px solid white;
+}
+
+.resources {
+	font-size: 16px;
+	font-weight: bold;
 }
