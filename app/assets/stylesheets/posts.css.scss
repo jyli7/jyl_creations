@@ -1,0 +1,45 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-body-input {
+	width: 100%;
+}
+
+.post-title {
+	margin-top: 12px;
+	margin-bottom: 32px;
+	float: left;
+}
+
+.last-edited {
+	font-size: 14px;
+	float: right;
+	font-style: italic;
+	margin-top: 5px;
+}
+
+.post-body {
+	font-size: 15px;
+	clear: both;
+	a {
+		border-bottom: 1px dotted white;
+	}
+}
+
+.blue_block {
+	margin-top: 10px;
+	padding: 10px 10px 5px 15px;
+	// background-color: #D9EDFC;
+	border: 1px solid gray;
+	margin-bottom: 15px;
+	line-height: 20px;
+}
+
+.section_header {
+	margin: 25px 0 15px 0;
+	padding-bottom: 4px;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 2px solid white;
+}

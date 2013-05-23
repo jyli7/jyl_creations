@@ -15,4 +15,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_admin!
+    raise CanCan::AccessDenied unless current_user && current_user.has_role?(:admin)
+  end
+
 end

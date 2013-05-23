@@ -221,17 +221,17 @@ a, a:visited {
 	position: absolute;
 	&.stage-left {
 		left: -3500px;
-		@include transition(left 0.5s linear);
+		@include transition(left 0.4s linear);
 	}
 
 	&.stage-right {
 		left: 3500px;
-		@include transition(left 0.5s linear);
+		@include transition(left 0.4s linear);
 	}
 	
 	&.active {
 		left: 0px;
-		@include transition(left 0.5s linear);
+		@include transition(left 0.4s linear);
 	}
 
 }
@@ -247,4 +247,8 @@ a, a:visited {
 
 .about-container {
 	padding-top: 10px;
+}
+
+h1, h2, h3, h4 {
+	color: white;
 }
