@@ -7,8 +7,8 @@
 }
 
 .post-title {
-	margin-top: 23px;
-	margin-bottom: 32px;
+	margin-top: 35px;
+	margin-bottom: 40px;
 	font-family: "Georgia", "Times New Roman", serif;
 }
 
@@ -21,9 +21,6 @@
 
 .post-body {
 	font-size: 15px;
-	a {
-		border-bottom: 1px dotted white;
-	}
 }
 
 .blue_block {
@@ -46,4 +43,19 @@
 .resources {
 	font-size: 16px;
 	font-weight: bold;
+}
+
+
+.post-last-update {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.post-link {
+	margin-left: 5px;
+}
+
+.post-index-item {
+	margin-bottom: 15px;
+	font-size: 16px;
 }

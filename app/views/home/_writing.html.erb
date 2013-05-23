@@ -1,0 +1,7 @@
+<% posts.each do |post| %>
+	<div class="post-index-item">
+		<div class="post-last-update"><%= post.updated_at.strftime("%b %d, %Y") %></div>
+		&mdash;
+		<%= link_to post.title, post_path(post), class: 'post-link' %>
+	</div>
+<% end %>

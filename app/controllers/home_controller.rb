@@ -47,5 +47,7 @@ class HomeController < ApplicationController
       }
     ]
 
+    @posts = Post.all
+
   end
 end
