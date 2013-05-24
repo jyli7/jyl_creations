@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_filter :perm_authenticate
+  before_filter :temp_authenticate
 
   def new
     super
@@ -20,8 +20,6 @@ class RegistrationsController < Devise::RegistrationsController
   def destroy
     super
   end
-
-  private
 
     
 
