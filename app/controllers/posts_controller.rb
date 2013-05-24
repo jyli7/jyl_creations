@@ -82,7 +82,7 @@ class PostsController < ApplicationController
   private
 
     def find_post
-      @course = Moped::BSON::ObjectId.legal?(params[:id]) ?
+      @post = Moped::BSON::ObjectId.legal?(params[:id]) ?
           Post.find(params[:id]) :
           Post.where({slug: params[:id]}).first
     end

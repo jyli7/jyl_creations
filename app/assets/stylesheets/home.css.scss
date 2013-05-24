@@ -1,6 +1,4 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'mixins.css.scss';
 
 $body-background: #141316;
 $link-color: #FFFFFF;
@@ -10,18 +8,14 @@ $menu-link-hover-color: #333333;
 $header-wrap-color: #F7F7F7;
 $nav-border-color: #636363;
 
-@mixin transition($transition) {
-  -webkit-transition: $transition;
-     -moz-transition: $transition;
-      -ms-transition: $transition;
-       -o-transition: $transition;
-          transition: $transition;
-}
-
 body {
 	background-color: $body-background;
 	color: white;
 	// background-image: image-url('tiny_grid.png');
+}
+
+.hidden {
+	display: none;
 }
 
 .header-wrap {
@@ -66,10 +60,6 @@ h3 {
 
 .right-menu {
 	a { font-variant: small-caps; }
-}
-
-.logo {
-	font-variant: none;
 }
 
 .right-menu {
