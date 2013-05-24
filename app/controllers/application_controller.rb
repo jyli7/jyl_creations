@@ -1,16 +1,24 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :authenticate
+  before_filter :temp_authenticate
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, :alert => exception.message
   end
 
-  def authenticate
+  def temp_authenticate
     if Rails.env.production?
       authenticate_or_request_with_http_basic do |username, password|
         username == "jimmy" && password == "foobarpass"
+      end
+    end
+  end
+
+  def perm_authenticate
+    if Rails.env.production?
+      authenticate_or_request_with_http_basic do |username, password|
+        username == "jimmy" && password == "cacpassfoo7"
       end
     end
   end

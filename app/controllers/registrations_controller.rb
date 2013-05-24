@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_filter :require_admin!
+  before_filter :perm_authenticate
 
   def new
     super
