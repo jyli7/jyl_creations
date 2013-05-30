@@ -5,8 +5,7 @@
 }
 
 .post-title {
-	margin-top: 35px;
-	margin-bottom: 40px;
+	margin: 35px 0;
 	font-family: "Georgia", "Times New Roman", serif;
 }
 
@@ -97,4 +96,8 @@ blockquote {
 	line-height: 24px;
 	color: white;
 	font-style: italic;
+}
+
+.post-last-update {
+	width: 97px;
 }
