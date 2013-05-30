@@ -7,8 +7,13 @@ class Post
   field :title, type: String
   field :body, type: String
   field :slug, type: String
+  field :written_at, type: Date
 
   def create_slug
     self.slug = self.title.parameterize
+  end
+
+  def display_time
+    self.written_at || self.updated_at
   end
 end

@@ -1,7 +1,7 @@
 <h3> Recent Posts </h3>
 <% posts.each do |post| %>
 	<div class="post-index-item">
-		<div class="post-last-update"><%= post.updated_at.strftime("%b %d, %Y") %></div>
+		<div class="post-last-update"><%= post.display_time.strftime("%b %d, %Y") %></div>
 		&mdash;
 		<%= link_to post.title, post_path(post.slug), class: 'post-link' %>
 	</div>
