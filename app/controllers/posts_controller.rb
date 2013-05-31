@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.order_by(:written_at.asc)
 
     respond_to do |format|
       format.html # index.html.erb

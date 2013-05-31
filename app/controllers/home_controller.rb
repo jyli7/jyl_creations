@@ -47,7 +47,6 @@ class HomeController < ApplicationController
       }
     ]
 
-    @posts = Post.all
-
+    @posts = Post.order_by(:written_at.asc)
   end
 end
