@@ -4,5 +4,8 @@
 		<div class="post-last-update"><%= post.display_time.strftime("%b %d, %Y") %></div>
 		&mdash;
 		<%= link_to post.title, post_path(post.slug), class: 'post-link' %>
+		<% if post.slug == 'learning-to-code-the-roadmap-i-wish-i-had-been-given' %>
+			<span>(Over 50,000 views)</span>
+		<% end %>
 	</div>
 <% end %>
