@@ -126,6 +126,7 @@ var messageMe = function () {
 		$form = $('.message-me-form');
 		e.preventDefault();
 		if ($form.parsley('validate')) {
+			$form.addClass('loading');
 			$.ajax({ // create an AJAX call...
 	      data: $form.serialize(), // get the form data
 	      type: $form.attr('method'), // GET or POST
@@ -134,6 +135,7 @@ var messageMe = function () {
 	        $('.to-be-hidden').fadeOut(300, function () {
 	        	$('.thank-you-msg').fadeIn(300);
 	        });
+	        $form.removeClass('loading');
 	      }
 	    });
 		}
