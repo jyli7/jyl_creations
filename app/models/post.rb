@@ -14,6 +14,6 @@ class Post
   end
 
   def display_time
-    self.written_at || self.updated_at
+    self.written_at || self.created_at || self.updated_at
   end
 end
