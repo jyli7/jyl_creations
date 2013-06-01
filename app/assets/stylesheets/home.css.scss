@@ -5,7 +5,7 @@ $link-color: #FFFFFF;
 $menu-link-color: black;
 $link-hover-color: #AAAAAA;
 $menu-link-hover-color: #333333;
-$header-wrap-color: #F7F7F7;
+$header-wrap-color: #FDFDFD;
 $nav-border-color: #636363;
 
 body {
@@ -241,7 +241,7 @@ a, a:visited {
 
 }
 
-.about-intro, .about-body {
+.about-container, .inquiry-container {
 	font-size: 22px;
 	line-height: 1.3em;
 }
@@ -250,7 +250,7 @@ a, a:visited {
 	border-bottom: 1px dotted #ddd;
 }
 
-.about-container {
+.about-container, .inquiry-container {
 	padding-top: 10px;
 }
 
@@ -267,5 +267,43 @@ h1, h2, h3, h4 {
 .opener {
 	font-family: "Vollkorn", arial, sans-serif;
 	font-size: 35px;
+}
 
+.message-me-form {
+	margin-bottom: 20px;
+
+	.name-field, .email-field {
+		float: left;
+		width: 300px;
+		margin-top: 5px;
+		background-color: $header-wrap-color;
+	}
+
+	.name-field {
+		margin-right: 25px;
+	}
+
+	.message-field {
+		clear: both;
+		width: 647px;
+		margin-top: 25px;
+		height: 225px;
+		background-color: $header-wrap-color;
+	}
+	input[type='text']{
+		font-size: 17px;
+		padding: 10px 8px;
+	}
+
+	textarea {
+		font-size: 17px;
+		padding: 10px 8px;
+	}
+}
+
+.bttn {
+	font-size: 15px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	margin-top: 24px;
 }

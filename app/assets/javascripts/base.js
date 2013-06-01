@@ -5,6 +5,7 @@ $(function () {
 	initMenuItemListener();
 	initWritingListener();
 	identifySection();
+	messageMe();
 });
 
 // Set '#work' at root, by default
@@ -118,4 +119,22 @@ var noSlide = function (fullHash) {
 // Get rid of 'noSlide' if necessary
 var cleanHash = function (uncleanHash) {
 	return uncleanHash.split('-')[0]
+}
+
+var messageMe = function () {
+	$('.message-me').on('click', function (e) {
+		$form = $('.message-me-form');
+		e.preventDefault();
+		$.ajax({ // create an AJAX call...
+	      data: $form.serialize(), // get the form data
+	      type: $form.attr('method'), // GET or POST
+	      url: $form.attr('action'), // the file to call
+	      success: function(response) { // on success..
+	        $('.loading').removeClass('loading');
+	        // $('input, select').attr('disabled', false);
+	        $('.results').html(response); // update the DIV
+	        $('.results').tablesorter();
+	      }
+	    });
+	});
 }

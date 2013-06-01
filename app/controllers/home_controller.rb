@@ -49,4 +49,9 @@ class HomeController < ApplicationController
 
     @posts = Post.order_by(:written_at.desc)
   end
+
+  def mail
+    UserMailer.inquiry_filed(params[:name], params[:email], params[:message]).deliver
+    format.json {render json: {}}
+  end
 end
