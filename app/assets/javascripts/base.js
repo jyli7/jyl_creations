@@ -1,5 +1,6 @@
 $(function () {
 	initWorkHash();
+	initInitialLoad();
 	initMenuLinkListener();
 	initMenuItemListener();
 	initWritingListener();
@@ -10,6 +11,15 @@ $(function () {
 var initWorkHash = function () {
 	if (window.location.pathname == "/" && !window.location.hash) {
 		window.location.hash = 'work';
+	}
+}
+
+var initInitialLoad = function () {
+	if (window.location.hash === '#work') {
+		$('.work-item-description').addClass('hidden');
+		setTimeout(function () {
+			$('.work-item-description').removeClass('hidden');
+		}, 300);
 	}
 }
 
@@ -49,7 +59,6 @@ var initMenuItemListener = function () {
 		}
 
 		// Hide the slide stuff if noSlide is true
-		debugger;
 		if (noSlide) { $('.section-item').addClass('hidden'); }
 		
 		$('.section-item').removeClass('stage-left active stage-right');
