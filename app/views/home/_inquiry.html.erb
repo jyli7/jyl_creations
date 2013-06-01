@@ -1,9 +1,10 @@
 <div class="inquiry-container">
-  <p>Interested in working together? Send me a message:</p>
-  <form class="message-me-form" action="/mail" method="post">
-		<input type="text" placeholder="Name" class="name-field" name="name"></input>
-		<input type="text" placeholder="Email" class="email-field" name="email"></input>
-		<textarea placeholder="Message" class="message-field" name="message"></textarea>
+  <p class="to-be-hidden">Interested in working together? Send me a message:</p>
+  <form class="message-me-form to-be-hidden" action="/mail" method="post" data-validate="parsley">
+		<input type="text" placeholder="Name" class="name-field" name="name" data-required="true" data-trigger="blur" value=""></input>
+		<input type="text" placeholder="Email" class="email-field" name="email" data-required="true" data-trigger="blur" data-type="email" value=""></input>
+		<textarea placeholder="Message" class="message-field" name="message" data-required="true" data-trigger="blur" value=""></textarea>
 		<button class="message-me bttn">Send</button>
 	</form>
+	<p class="thank-you-msg">Thanks for getting in touch! I will respond to your message as quickly as possible.</p>
 </div>

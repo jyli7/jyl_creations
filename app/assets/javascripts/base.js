@@ -125,16 +125,18 @@ var messageMe = function () {
 	$('.message-me').on('click', function (e) {
 		$form = $('.message-me-form');
 		e.preventDefault();
-		$.ajax({ // create an AJAX call...
+		if ($form.parsley('validate')) {
+			$.ajax({ // create an AJAX call...
 	      data: $form.serialize(), // get the form data
 	      type: $form.attr('method'), // GET or POST
 	      url: $form.attr('action'), // the file to call
 	      success: function(response) { // on success..
-	        $('.loading').removeClass('loading');
-	        // $('input, select').attr('disabled', false);
-	        $('.results').html(response); // update the DIV
-	        $('.results').tablesorter();
+	        $('.to-be-hidden').fadeOut(300, function () {
+	        	$('.thank-you-msg').fadeIn(300);
+	        });
 	      }
 	    });
+		}
+		
 	});
 }

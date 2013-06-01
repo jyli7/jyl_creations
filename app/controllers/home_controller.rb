@@ -52,6 +52,6 @@ class HomeController < ApplicationController
 
   def mail
     UserMailer.inquiry_filed(params[:name], params[:email], params[:message]).deliver
-    format.json {render json: {}}
+    render json: {}
   end
 end

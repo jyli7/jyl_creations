@@ -307,3 +307,16 @@ h1, h2, h3, h4 {
 	margin-bottom: 10px;
 	margin-top: 24px;
 }
+
+.thank-you-msg {
+	display: none;
+}
+
+.parsley-error-list {
+	display: none !important;
+}
+
+.parsley-error {
+	border: 1px solid red !important;
+	@include transition(border 0.3s linear);
+}
