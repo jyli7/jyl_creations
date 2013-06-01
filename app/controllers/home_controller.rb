@@ -42,7 +42,7 @@ class HomeController < ApplicationController
         name: "Apply Up",
         link: "http://applyup.herokuapp.com",
         image: "apply_up.png", 
-        description: "The Common Application for Startups. (Work in progress, password protected).",
+        description: "Rails project for client. (Work in progress, password protected).",
         tech: "[Rails, Javascript, Backbone, MongoDB]"
       }
     ]
