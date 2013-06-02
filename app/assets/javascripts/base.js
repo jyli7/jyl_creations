@@ -20,7 +20,7 @@ var initInitialLoad = function () {
 		$('.work-item-description').addClass('hidden');
 		setTimeout(function () {
 			$('.work-item-description').removeClass('hidden');
-		}, 300);
+		}, 1000);
 	}
 }
 
