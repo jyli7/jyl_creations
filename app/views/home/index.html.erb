@@ -1,11 +1,15 @@
-<div class="section about">
+<div class="section about" id="about">
 	<%= render 'home/about.html.erb' %>
 </div>
 
-<div class="section with-border work">
+<div class="section with-border work" id="work">
 	<%= render 'home/work.html.erb', {items: @items} %>
 </div>
 
-<div class="section with-border writing">
+<div class="section with-border writing" id="writing">
 	<%= render 'home/writing.html.erb', {items: @items, posts: @posts} %>
+</div>
+
+<div class="section with-border inquiry" id="inquiry">
+	<%= render 'home/inquiry.html.erb', {items: @items, posts: @posts} %>
 </div>
