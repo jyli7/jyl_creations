@@ -1,13 +1,14 @@
 <h2>My Work</h2>
 
 <% items.each do |item| %>
+
 	<article class="work-item-container">
-		<div class="work-item">
+		<div class="work-item <% if item[:image] == 'pivotal_labs.png'%>pivotal-labs-item<% end %>">
 			<a href="<%= item[:link]%>"><img src=<%= "/assets/#{item[:image]}" %> class="work-img"></a>
 		</div>
-		<div class="work-item-description alpha left">
-			<div class="description ">
-				<div class="strong"><%= item[:name] %>.</div>
+		<div class="work-item-description">
+			<div class="description">
+				<div class="work-item-name"><%= item[:name] %>.</div>
 				<%= item[:description] %>
 			</div>
 			<div class="tech"><%= item[:tech] %></div>

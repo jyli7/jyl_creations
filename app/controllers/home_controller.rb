@@ -16,13 +16,6 @@ class HomeController < ApplicationController
         tech: "[Rails, Javascript, jQuery, MongoDB]"
       },
       {
-        name: "Lake Chelan",
-        link: "http://lake-chelan.herokuapp.com",
-        image: "lake_chelan.png",
-        description: "Post-wedding trip site for client.",
-        tech: "[Javascript]"
-      },
-      {
         name: "Pivotal Labs",
         link: "http://www.pivotallabs.com",
         image: "pivotal_labs.png",

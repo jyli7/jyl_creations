@@ -1,6 +1,5 @@
 $(function () {
 	initWorkHash();
-	initInitialLoad();
 	initMenuLinkListener();
 	initMenuItemListener();
 	initWritingListener();
@@ -12,15 +11,6 @@ $(function () {
 var initWorkHash = function () {
 	if (window.location.pathname == "/" && !window.location.hash) {
 		window.location.hash = 'work';
-	}
-}
-
-var initInitialLoad = function () {
-	if (window.location.hash === '#work') {
-		$('.work-item-description').addClass('hidden');
-		setTimeout(function () {
-			$('.work-item-description').removeClass('hidden');
-		}, 1000);
 	}
 }
 
