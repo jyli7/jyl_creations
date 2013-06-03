@@ -1,8 +1,8 @@
 @import 'mixins.css.scss';
 
 $body-background: #FDFDFD;
-$link-color: blue;
-$link-hover-color: #AAAAAA;
+$link-color: #003399;
+$link-hover-color: #5F7EBF;
 $menu-link-hover-color: #333333;
 $header-wrap-color: #FDFDFD;
 $nav-border-color: #636363;
@@ -16,6 +16,14 @@ body {
 	display: block;
 	width: 560px;
 	position: relative;
+}
+
+.fc-webicon {
+	margin-right: 5px;
+}
+
+.social-links {
+	margin: 15px 0;
 }
 
 .photo-port {
@@ -177,15 +185,28 @@ a, a:visited {
 }
 
 .body-container {
-	margin-top: 40px;
+	margin-top: 50px;
 	font-family: 'Brawler', Palatino, Lucida Grande, Helvetica, sans-serif;
+	h1, h2, h3, h4, h5 {
+		font-family: 'Brawler', Palatino, Lucida Grande, Helvetica, sans-serif;	
+	}
+
+	h2 {
+		font-size: 32px;
+		font-variant: small-caps;
+	}
 }
 
 .section {
 	font-size: 22px;
 	color: #181818;
 	line-height: 1.4em;
-	
+	padding-bottom: 15px;
+}
+
+.section.with-border {
+	border-top: 1px solid #E6E6E6;
+	padding-top: 25px;
 }
 
 .centered {
