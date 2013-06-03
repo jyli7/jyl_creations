@@ -1,0 +1,235 @@
+@import 'mixins.css.scss';
+
+$body-background: #FDFDFD;
+$link-color: blue;
+$link-hover-color: #AAAAAA;
+$menu-link-hover-color: #333333;
+$header-wrap-color: #FDFDFD;
+$nav-border-color: #636363;
+
+body {
+	background-color: $body-background;
+}
+
+.container {
+	margin: 0 auto;
+	display: block;
+	width: 560px;
+	position: relative;
+}
+
+.photo-port {
+	padding: 4px;
+	width: 120px;
+	height: 120px;
+	border: 1px solid #ACBDDE;
+	border-radius: 100px;
+	display: inline-block;
+	position: absolute;
+	background: #F3F6FC;
+	top: 28px;
+	left: -6px;
+}
+
+.loading {
+	opacity: 0.7;
+}
+
+.hidden {
+	display: none;
+}
+
+.name {
+	position: absolute;
+	text-transform: uppercase;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	color: #001F5C;
+	margin: 0;
+	top: 64px;
+	left: 156px;
+	font-weight: normal;
+	font-size: 42px;
+	letter-spacing: 1px;
+}
+
+.jimmy-face {
+	width: 120px;
+	height: 120px;
+	border-radius: 64px;
+	-moz-border-radius: 64px;
+}
+
+h3 {
+	font-size: 24px;
+}
+ 
+.main-header {
+	height: 135px;
+	border-bottom: 1px solid #CDD7EB;
+	background: #FBFCFE;
+}
+
+
+.stronger {
+	font-weight: 600;
+}
+
+.menu {
+	margin-bottom: 0px;
+	font-size: 20px;
+}
+
+a, a:visited {
+	color: $link-color;
+	text-decoration: none;
+	@include transition(all 0.1s linear);
+
+	&:hover {
+		color: $link-hover-color;
+		@include transition(all 0.2s ease);
+	};
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.work-item-container {
+	padding: 35px 0px 0px 0px;
+	width: 300px;
+	height: 200px;
+	float: left;
+	margin-right: 30px;
+	position: relative;
+}
+
+.work-item-container:nth-child(3n) {
+	margin-right: 0px;
+};
+
+.work-item-container:first-child {
+	border: none;
+};
+
+.work-item {
+	float: left;
+	width: 100%;
+	border: 2px solid #E6E6E6;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.work-item-description {
+	font-size: 16px;
+	color: white;
+	width: 95%;
+	height: 85%;
+	position: absolute;
+	opacity: 1;
+
+	.description {
+		position: absolute;
+		top: 9px;
+		left: 10px;
+	}
+	.tech {
+		position: absolute;
+		bottom: 9px;
+		left: 11px;
+		font-size: 15px;
+	}
+
+	&.left {
+		font-style: italic;
+	}
+}
+
+.work-img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 1;
+	z-index: 1;
+	@include transition(opacity 0.2s linear);
+
+	&:hover {
+		opacity: 0.1;
+		@include transition(opacity 0.3s linear);
+	};
+}
+
+.strong {
+	font-weight: bold;
+}
+
+#main {
+	position: relative;
+}
+
+.dotted-line {
+	border-bottom: 1px dotted #ddd;
+}
+
+.body-container {
+	margin-top: 40px;
+	font-family: 'Brawler', Palatino, Lucida Grande, Helvetica, sans-serif;
+}
+
+.section {
+	font-size: 22px;
+	color: #181818;
+	line-height: 1.4em;
+	
+}
+
+.centered {
+  position: fixed;
+  top: 45%;
+  left: 44%;
+}
+
+.opener {
+	font-family: "Vollkorn", arial, sans-serif;
+	font-size: 35px;
+}
+
+.bttn {
+	font-size: 15px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	margin-top: 24px;
+}
+
+.thank-you-msg {
+	display: none;
+}
+
+.parsley-error-list {
+	display: none !important;
+}
+
+.parsley-error {
+	border: 1px solid red !important;
+	@include transition(border 0.7s linear);
+}
+
+.sourcecode {
+	display: block;
+	font: 1em 'Courier New', Courier, Fixed, monospace;
+	font-size: 100%;
+	color: #000;
+	background: #fff url(http://www.estudiowas.com.ar/images/preback.jpg) no-repeat left top;
+	overflow: auto;
+	text-align: left;
+	border: 1px solid #5581C0;
+	padding: 10px 20px 10px 30px;
+	margin: 1em 0 1em 0;
+	line-height: 17px;
+	font-weight: normal!important;
+}
