@@ -125,7 +125,7 @@ a, a:visited {
 	height: 150px;
 	position: relative;
 	border: 1px solid $dark-blue-border;
-	margin: 10px 0 10px 0;
+	margin: 10px 15px 10px 0;
 	background: #262626;
 }
 
@@ -164,6 +164,9 @@ a, a:visited {
 		position: absolute;
 		top: 12px;
 		left: 12px;
+		font-size: 13px;
+		line-height: 20px;
+		width: 88%;
 	}
 
 	.work-item-name {
@@ -343,4 +346,19 @@ footer {
       -ms-transition-duration: 0s;
        -o-transition-duration: 0s;
           transition-duration: 0s;
+}
+
+.work-filters {
+	margin-top: -10px;
+	margin-bottom: 10px;
+
+	li {
+		display: inline-block;
+		font-size: 15px;
+		margin-right: 25px;
+
+		&.active {
+			border-bottom: 1px dotted #003399;
+		}
+	}
 }

@@ -6,7 +6,14 @@ $(function () {
 
 	$('.work-filters a').on('click', function (e) {
 		e.preventDefault();
+		$(this).parent().siblings('li').removeClass('active');
+		$(this).parent().addClass('active');
 		var selector = $(this).data('filter');
-		$('.work-wrapper').isotope({ filter: '.' + selector });
+		if (selector === '*') {
+			$('.work-wrapper').isotope();
+		} else {
+			$('.work-wrapper').isotope({ filter: '.' + selector });
+		}
+		
 	});
 });
