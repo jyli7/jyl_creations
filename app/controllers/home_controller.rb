@@ -74,14 +74,6 @@ class HomeController < ApplicationController
         type: "client",
         description: "Rails/Node.js project for client. (Work in progress, link not available).",
         tech: "[Rails, Node.js]"
-      },
-      {
-        name: "Blue Apron",
-        link: "http://www.blueapron.com",
-        image: "blue_apron.png",
-        type: "client",
-        description: "Full stack work for Blue Apron.",
-        tech: "[Rails]"
       }
     ].shuffle
 
