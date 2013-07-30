@@ -362,3 +362,16 @@ footer {
 		}
 	}
 }
+
+
+/* 500-pixel layout for smaller screens */
+@media (max-width: 680px) {
+}
+
+/* 240-pixel layout for iPhone-sized screens */
+@media (max-width: 520px) {
+	.container {
+		width: 350px;
+		font-size: 12px;
+	}
+}
