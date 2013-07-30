@@ -375,6 +375,9 @@ footer {
 
 /* 500-pixel layout for smaller screens */
 @media (max-width: 680px) {
+	.container {
+		width: 450px;
+	}
 }
 
 /* 240-pixel layout for iPhone-sized screens */
@@ -384,7 +387,7 @@ footer {
 		.post-title {
 			font-size: 24px;
 			margin: 20px 0;
-			line-height: 30px;
+			line-height: 35px;
 		}
 		.left-arrow-wrapper {
 			display: none;
@@ -393,7 +396,13 @@ footer {
 			display: inline-block;
 		}
 		p {
-			font-size: 13px;
+			font-size: 14px;
+			margin: 0 0 15px 0;
+			line-height: 25px;
 		}
+	}
+
+	footer .container {
+		width: 231px
 	}
 }
