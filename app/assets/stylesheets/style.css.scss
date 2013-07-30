@@ -301,6 +301,9 @@ footer {
 	}	
 }
 
+.back-link {
+	display: none;
+}
 
 // ISOTOPE
 
@@ -378,6 +381,19 @@ footer {
 @media (max-width: 520px) {
 	.container {
 		width: 350px;
-		font-size: 12px;
+		.post-title {
+			font-size: 24px;
+			margin: 20px 0;
+			line-height: 30px;
+		}
+		.left-arrow-wrapper {
+			display: none;
+		}
+		.back-link {
+			display: inline-block;
+		}
+		p {
+			font-size: 13px;
+		}
 	}
 }
