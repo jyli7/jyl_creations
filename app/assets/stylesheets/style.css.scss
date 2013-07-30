@@ -127,7 +127,7 @@ a, a:visited {
 
 .work-item-container {
 	padding: 2px;
-	width: 46%;
+	width: 265px;
 	height: 150px;
 	position: relative;
 	border: 1px solid $dark-blue-border;
@@ -400,6 +400,12 @@ footer {
 			margin: 0 0 15px 0;
 			line-height: 25px;
 		}
+	}
+
+	.work-filters li {
+		font-size: 15px;
+		margin-right: 4px;
+
 	}
 
 	footer .container {
