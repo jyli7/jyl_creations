@@ -74,6 +74,14 @@ class HomeController < ApplicationController
         type: "client",
         description: "Rails/Node.js project for client. (Work in progress, link not available).",
         tech: "[Rails, Node.js]"
+      },
+      {
+        name: "Eat Drink Jobs",
+        link: "http://www.eatdrinkjobs.com",
+        image: "eat_drink_jobs.png",
+        type: "client",
+        description: "Feature additions and improvements for NYC startup",
+        tech: "[Rails, Mongo, Node.js]"
       }
     ].shuffle
 
