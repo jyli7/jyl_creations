@@ -94,6 +94,5 @@ class HomeController < ApplicationController
   end
 
   def endless_input
-    render layout: false
   end
 end
