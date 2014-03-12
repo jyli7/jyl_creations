@@ -5,4 +5,6 @@ JylCreations::Application.routes.draw do
   post '/mail' => 'home#mail'
   devise_for :users, :controllers => {:registrations => "registrations"}
 
+  get '/endless-input' => 'home#endless_input'
+
 end

@@ -92,4 +92,8 @@ class HomeController < ApplicationController
     UserMailer.inquiry_filed(params[:name], params[:email], params[:message]).deliver
     render json: {}
   end
+
+  def endless_input
+    render layout: false
+  end
 end
