@@ -8,6 +8,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
+gem 'rails_12factor'
 gem 'hub'
 gem 'pry'
 gem 'jquery-rails'
