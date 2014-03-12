@@ -266,6 +266,7 @@
 		
 		if (this.$inputs.index(this.$activeElement) === 0) {
 			this.$upArrow.addClass('endless-hidden');
+			this.$downArrow.addClass('endless-hidden');
 		} else if (this.$inputs.index(this.$activeElement) === lastElementIndex) {
 			this.$downArrow.addClass('endless-hidden');
 		}
